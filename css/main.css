@@ -1,0 +1,151 @@
+body {
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+div {
+    display: inline-block;
+}
+#primeiroContainer {
+    display: inline-block;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+
+#segundoContainer {
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.pedra {
+    background-color: white;
+    padding: 25px;
+    border-radius: 50%;
+    border: solid red 18px;
+    position:absolute;
+	left: 28%;
+	top: 60%;
+}
+
+.papel {
+    background-color: white;
+    padding: 25px;
+    border: solid blue 18px;
+    border-radius: 50%;
+    position:absolute;
+    left: -11%;
+    top: -17%;
+}
+
+.tesoura {
+    background-color: white;
+    padding: 25px;
+    border-radius: 50%;
+    border: solid yellow 18px;
+    position:absolute;
+    left: 65%;
+    top: -17%;
+}
+
+.center {
+    display: inline-block;
+    border-style: solid;
+    border-color: white;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    border-radius: 3%;
+    border-width: 1px;
+  }
+
+#score {
+    background-color: white;
+    color: rgb(100, 100, 100);
+    margin: 10px;
+    border-radius: 4px;
+    display: flow-root;
+    align-self: center;
+    padding: 10px;
+    font-weight: 700;
+}
+
+#placar{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.pedra_jogada {
+    background-color: white;
+    padding: 25px;
+    border-radius: 50%;
+    border: solid red 18px;
+}
+
+.papel_jogada {
+    background-color: white;
+    padding: 25px;
+    border-radius: 50%;
+    border: solid blue 18px;
+}
+
+.tesoura_jogada {
+    background-color: white;
+    padding: 25px;
+    border-radius: 50%;
+    border: solid yellow 18px;
+}
+
+#Mensagem_Container{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    padding: 0px 40px;
+    font-weight: 800;
+    font-size: 21px;
+    align-self: center;
+}
+
+#Play_Again{
+    background-color: white;
+    background-color: white;
+    padding: 6px 35px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.text{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    padding: 0px 40px;
+    font-weight: 800;
+    font-size: 21px;
+    align-self: center;
+}
+
+.text_user{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#rules{
+    
+}

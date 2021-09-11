@@ -1,0 +1,74 @@
+<!-- <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <title>Primeiro Projeto</title>
+        <body>
+            <header class="menu-principal">
+                <div class="logo">
+                    <img src="./img/logo.svg"/>
+                </div>
+                
+            </header>
+            <div class="img-triangulo">
+                <img src="img/bg-triangle.svg">
+            </div>
+            <div class="papel">
+                <a href="#" class="fill-div"></a>
+                <img src="img/icon-paper.svg">
+            </div>
+            <div class="pedra">
+                <img src="img/icon-rock.svg">
+            </div>
+            <div class="tesoura">
+                <img src="img/icon-scissors.svg">
+            </div>
+            
+        </body>
+    </head>
+</html> -->
+
+<html>
+    <head>
+                <title>Primeiro Projeto</title>
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <script type="text/javascript" src="js/main.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </head>
+    <body>            
+        <div id="placar" class="center">
+            <img class="pt-2 pb-2 ps-2" src="./img/logo.svg" alt=""/>
+            <div id="score">
+                <span class="ms-2 me-2">SCORE</span>
+                <h1 class="text-center">0</h1>
+            </div>
+        </div>
+
+            <div id="primeiroContainer">
+                <div class="img-triangulo">
+                    <img src="img/bg-triangle.svg" alt="">
+                </div>
+                <button class="pedra" type="button" onclick="ocultar_primeiroContainer('pedra')"><img src="img/icon-rock.svg"></button>
+                <button class="papel" type="button" onclick="ocultar_primeiroContainer('papel')"><img src="img/icon-paper.svg"></button>
+                <button class="tesoura" type="button" onclick="ocultar_primeiroContainer('tesoura')"><img src="img/icon-scissors.svg"></button>
+            </div>
+            <div id="segundoContainer" style="display:none"> 
+                <div>
+                    <p class="text_user">you picked</p>
+                    <div id="DivJogador">
+                        <img id="escolha_jogadorImg" alt="">
+                    </div>   
+                </div>
+  
+                <div id="Mensagem_Container">
+                    <p id="Mensagem">Mensagem</p>
+                    <button id="Play_Again" class="btn" onclick="play_again()">PLAY AGAIN</button>
+                </div>
+                <div>
+                    <p class="text_user">the house picked</p>
+                    <div id="DivMachine">
+                        <img id="escolha_computador" alt="">
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>
