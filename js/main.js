@@ -6,36 +6,38 @@ function jogar(escolha_jogador){
     let escolha_computador = opcoes[rand];
 
     //Identifica vitória/derrota
-    //pedra = 0, papel = 1, tesoura = 2
     switch (escolha_computador){
         case 'pedra':
             if(escolha_jogador == "pedra"){
-                console.log("DRAW");
+                document.querySelector("#mensagem").textContent = "DRAW";
             } else if(escolha_jogador == "papel"){
-                pontuacao();
-                console.log("YOU WIN");
+                document.querySelector("#mensagem").textContent = "YOU WIN";
+                pontuacao_win();
             } else if(escolha_jogador == "tesoura"){
-                console.log("YOU LOSE");
+                document.querySelector("#mensagem").textContent = "YOU LOSE";
+                pontuacao_lose();
             }
             break;
         case 'papel':
             if(escolha_jogador == "pedra"){
-                console.log("YOU LOSE");
+                document.querySelector("#mensagem").textContent = "YOU LOSE";
+                pontuacao_lose();
             } else if(escolha_jogador == "papel"){
-                console.log("DRAW");
+                document.querySelector("#mensagem").textContent = "DRAW";
             } else if(escolha_jogador == "tesoura"){
-                pontuacao();
-                console.log("YOU WIN");
+                document.querySelector("#mensagem").textContent = "YOU WIN";
+                pontuacao_win();
             }
             break;
         case 'tesoura':
             if(escolha_jogador == "pedra"){
-                pontuacao();
-                console.log("YOU WIN");
+                document.querySelector("#mensagem").textContent = "YOU WIN";
+                pontuacao_win();
             } else if(escolha_jogador == "papel"){
-                console.log("YOU LOSE");
+                document.querySelector("#mensagem").textContent = "YOU LOSE";
+                pontuacao_lose();
             } else if(escolha_jogador == "tesoura"){
-                console.log("DRAW");
+                document.querySelector("#mensagem").textContent = "DRAW";
             }
             break;
         default:
@@ -44,22 +46,30 @@ function jogar(escolha_jogador){
     return escolha_computador;
 }
 
-//SCORE
+//SCORE DA WIN
 let contador = 0;
-function pontuacao(){
+function pontuacao_win(){
     contador = contador + 1;
+    document.getElementById("contador").innerHTML = contador;
+    console.log("score",contador);
+}
+//SCORE DA LOSE
+function pontuacao_lose(){
+    contador = contador - 1;
+    document.getElementById("contador").innerHTML = contador;
     console.log("score",contador);
 }
 
 //Oculta a div primeiroContainer
 function ocultar_primeiroContainer(escolha) {
     document.getElementById("primeiroContainer").style.display = "none";
-    let escolha_jogador = escolha;
-    let escolha_computador = jogar(escolha);
-    mostrar_segundoContainer(escolha_jogador, escolha_computador);
+    mostrar_segundoContainer(escolha);
 }
 
-function mostrar_segundoContainer(escolha_jogador, escolha_computador) {
+//Chama a function jogar() e exibe as imagens de acordo com as mãos selecionadas
+function mostrar_segundoContainer(escolha) {
+    let escolha_jogador = escolha;
+    let escolha_computador = jogar(escolha);
     document.getElementById("escolha_jogadorImg").src = define_Img(escolha_jogador);
     document.getElementById("escolha_computador").src =define_Img(escolha_computador);
     document.getElementById("segundoContainer").style.display = "flex";
@@ -92,11 +102,12 @@ function mostrar_segundoContainer(escolha_jogador, escolha_computador) {
    
 }
 
+//Retorna ao container inicial
 function play_again(){
     document.getElementById("segundoContainer").style.display = "none";
     document.getElementById("primeiroContainer").style.display = "flex";
 }
-
+//Define caminho da mão que ira ser mostrada
 function define_Img(escolha_img, style){
     if (escolha_img === "pedra"){
         escolha_img = "img/icon-rock.svg";
