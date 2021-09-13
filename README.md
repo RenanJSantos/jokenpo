@@ -1,19 +1,17 @@
-DESCRIÇÃO
+# Descrição
 Desenvolvimento de um jogo de Pedra, papel e Tesoura.
 
-OBJETIVO
+# Objetivo
 Este projeto faz parte da segunda etapa do processo seletivo para vaga de desenvolvedor.
 
-TECNOLOGIAS
+# Tecnologias
 HTML
 JavaScript
 
-BIBLIOTECAS DO PROJETO
-Foi utilizado o bootstrap como framework para alguns elementos.
-
-COMO RODAR
-# Clone esse repositório
+# Como rodar
+Clone esse repositório
 $ git clone https://github.com/tosure/jokenpo.git
 
-# Abra o arquivo
+Abra o arquivo:
 index.html
+
