@@ -1,45 +1,16 @@
-<!-- <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="./css/main.css">
-        <title>Primeiro Projeto</title>
-        <body>
-            <header class="menu-principal">
-                <div class="logo">
-                    <img src="./img/logo.svg"/>
-                </div>
-                
-            </header>
-            <div class="img-triangulo">
-                <img src="img/bg-triangle.svg">
-            </div>
-            <div class="papel">
-                <a href="#" class="fill-div"></a>
-                <img src="img/icon-paper.svg">
-            </div>
-            <div class="pedra">
-                <img src="img/icon-rock.svg">
-            </div>
-            <div class="tesoura">
-                <img src="img/icon-scissors.svg">
-            </div>
-            
-        </body>
-    </head>
-</html> -->
-
 <html>
     <head>
                 <title>Primeiro Projeto</title>
         <link rel="stylesheet" type="text/css" href="./css/main.css">
         <script type="text/javascript" src="js/main.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    </head>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">    </head>
     <body>            
         <div id="placar" class="center">
             <img class="pt-2 pb-2 ps-2" src="./img/logo.svg" alt=""/>
             <div id="score">
                 <span class="ms-2 me-2">SCORE</span>
-                <h1 class="text-center">0</h1>
+                <h1 id="contador" class="text-center">0</h1>
             </div>
         </div>
 
@@ -60,7 +31,7 @@
                 </div>
   
                 <div id="Mensagem_Container">
-                    <p id="Mensagem">Mensagem</p>
+                    <p id="mensagem">Mensagem</p>
                     <button id="Play_Again" class="btn" onclick="play_again()">PLAY AGAIN</button>
                 </div>
                 <div>
@@ -70,5 +41,27 @@
                     </div>
                 </div>
             </div>
+        <!-- Button trigger modal -->
+<button type="button" class="rules" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Rules
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Rules</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modal-dialog-centered"> 
+            <img src="img/image-rules.svg">
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+
     </body>
 </html>
